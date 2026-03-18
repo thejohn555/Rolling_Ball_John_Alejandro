@@ -20,6 +20,8 @@ public class Trap : MonoBehaviour
     private void OnEnable()
     {
         MeshRenderer = GetComponent<MeshRenderer>();
+        MeshRenderer.enabled = true;
+        Active = true;
     }
 
     // Update is called once per frame

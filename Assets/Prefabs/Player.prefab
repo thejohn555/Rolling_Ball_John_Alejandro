@@ -13,13 +13,13 @@ GameObject:
   - component: {fileID: 66636129897350373}
   - component: {fileID: 4819719979449333377}
   - component: {fileID: 7930319819784555732}
-  - component: {fileID: 6874917382117716925}
+  - component: {fileID: 9162889792464750493}
   - component: {fileID: 4244361239369032363}
   - component: {fileID: 6382517390779122804}
   - component: {fileID: 4053552234135905182}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -86,7 +86,7 @@ MonoBehaviour:
   xMauseSpeed: 150
   jumpForce: 6
   moveForce: 15
---- !u!114 &6874917382117716925
+--- !u!114 &9162889792464750493
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,9 +95,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2141911681565849333}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 153f55e80d05151428c6f1510dd83976, type: 3}
+  m_Script: {fileID: 11500000, guid: d9122075fa9b6f54e8c47e02f63af41a, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CharacterHealt
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
 --- !u!23 &4244361239369032363
 MeshRenderer:
   m_ObjectHideFlags: 0

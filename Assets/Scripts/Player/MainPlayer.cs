@@ -7,13 +7,13 @@ namespace Player
     {
         public Rigidbody Rb{get; private set;}
 
-        public Characterhealth Health { get; private set; }
+        public CharacterHealth Health { get; private set; }
 
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         protected void Awake()
         {
             Rb = GetComponent<Rigidbody>();
-            Health = GetComponent<Characterhealth>();
+            Health = GetComponent<CharacterHealth>();
         }
 
         protected void Start()

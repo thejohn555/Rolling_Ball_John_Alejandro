@@ -2,10 +2,10 @@ using UnityEngine;
 
 namespace Characters
 {
-    public class Characterhealth : MonoBehaviour,IDamageable
+    public class CharacterHealth : MonoBehaviour,IDamageable
     {
-        private int health;
-        private int maxHealth;
+        protected int health;
+        protected int maxHealth;
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
         {
@@ -18,7 +18,7 @@ namespace Characters
         
         }
 
-        public void MakeDamage(int damage)
+        public virtual void MakeDamage(int damage)
         {
             health -= damage;
             if (health > 0) return;

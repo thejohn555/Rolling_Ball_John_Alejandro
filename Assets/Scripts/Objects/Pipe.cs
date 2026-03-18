@@ -4,27 +4,21 @@ using UnityEngine;
 
 namespace Objects
 {
-    public class Pipe : MonoBehaviour,IInteractuable
+    public class Pipe : MonoBehaviour
     {
         [SerializeField] private Transform tpPoint;
-        private BoxCollider boxCollider;
         private bool isTouching;
+        public bool Correct { get; set; }
         private Transform player;
 
-        private float hPipe;
-        // Start is called once before the first execution of Update after the MonoBehaviour is created
-        void Start()
+        void Awake()
         {
-            boxCollider = GetComponent<BoxCollider>();
-        
-            hPipe = boxCollider.size.y;
-        
+            Correct = false;
         }
 
-        // Update is called once per frame
         void Update()
         {
-            if (!isTouching) return;
+            if (!isTouching||!Correct) return;
             if (Input.GetKeyDown(KeyCode.F))
             {
                 player.position = tpPoint.position;
@@ -33,20 +27,15 @@ namespace Objects
 
         private void OnCollisionEnter(Collision other)
         {
-            if (!other.gameObject.TryGetComponent(out MainPlayer player)) return;
-            this.player = player.transform;
+            if (!other.gameObject.CompareTag("Player")) return;
+            player = other.transform;
             isTouching = true;
         }
         private void OnCollisionExit(Collision other)
         {
-            if (!other.gameObject.TryGetComponent(out MainPlayer player)) return;
-            this.player = null;
+            if (!other.gameObject.CompareTag("Player")) return;
             isTouching = false;
-        }
-
-        public void Interact()
-        {
-        
+            player = null;
         }
     }
 }

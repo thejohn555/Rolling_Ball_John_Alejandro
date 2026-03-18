@@ -18,7 +18,7 @@ namespace Player
         protected override void Awake()
         {
             base.Awake(); 
-            hRaycast = transform.localScale.y + 0.2f;
+            hRaycast = transform.localScale.y + 0.02f;
             
         }
 
