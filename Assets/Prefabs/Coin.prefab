@@ -125,3 +125,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50b33d10b57ca3345a9febade351a6cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Objects.Coin
+  speedRotation: 220
+  speedUpAndDown: 0.1
+  timerLimit: 0.7

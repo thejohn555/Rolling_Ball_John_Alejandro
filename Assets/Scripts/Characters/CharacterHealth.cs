@@ -4,12 +4,12 @@ namespace Characters
 {
     public class CharacterHealth : MonoBehaviour,IDamageable
     {
-        protected int health;
+        [SerializeField] protected int health;
         protected int maxHealth;
         // Start is called once before the first execution of Update after the MonoBehaviour is created
-        void Start()
+        protected void Awake()
         {
-        
+            maxHealth = health;
         }
 
         // Update is called once per frame

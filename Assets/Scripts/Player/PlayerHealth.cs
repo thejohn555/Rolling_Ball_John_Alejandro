@@ -6,7 +6,7 @@ public class PlayerHealth : CharacterHealth
     public void Awake()
     {
         health = 100;
-        maxHealth = health;
+        base.Awake();
     }
 
     public void Start()
