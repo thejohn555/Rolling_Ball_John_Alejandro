@@ -22,7 +22,7 @@ public class PipeManager : MonoBehaviour
         rnd = new Random();
         int correct = rnd.Next(0,pipe.Length);
         pipe[correct].Correct = true;
-        correctPipe= GameObject.Find("CorrectPipe").GetComponent<TMP_Text>();
+        correctPipe = GameObject.Find("CorrectPipe").GetComponent<TMP_Text>();
         correctPipe.text = (correct+1).ToString();
     }
 }
