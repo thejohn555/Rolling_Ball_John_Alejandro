@@ -39,12 +39,22 @@ public class Trap : MonoBehaviour
         timer = 0;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (!Active) return;
         if (other.TryGetComponent(out IDamageable damageable))
         {
             damageable.MakeDamage(Damage);
+            Active = false;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (!Active) return;
+        if (other.TryGetComponent(out IDamageable damageable))
+        {
+            Active = true;
         }
     }
 }

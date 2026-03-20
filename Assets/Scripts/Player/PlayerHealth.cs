@@ -1,23 +1,26 @@
-using System;
 using Characters;
+using Managers;
 
-public class PlayerHealth : CharacterHealth
+namespace Player
 {
-    public void Awake()
+    public class PlayerHealth : CharacterHealth
     {
-        health = 100;
-        base.Awake();
-    }
+        protected override void Awake()
+        {
+            health = 100;
+            base.Awake();
+        }
 
-    public void Start()
-    {
-        UIManager.instance.ReloadHp(health, maxHealth);
-    }
+        public void Start()
+        {
+            UIManager.Instance.ReloadHp(health, maxHealth);
+        }
     
-    public override void MakeDamage(int damage)
-    {
-        base.MakeDamage(damage);
-        UIManager.instance.ReloadHp(health, maxHealth);
-        StartCoroutine(UIManager.instance.ReloadVisualHp());
+        public override void MakeDamage(int damage)
+        {
+            UIManager.Instance.ReloadHp(health-damage, maxHealth);
+            StartCoroutine(UIManager.Instance.BloodEfect());
+            base.MakeDamage(damage);
+        }
     }
 }

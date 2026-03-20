@@ -1,6 +1,7 @@
 using System;
 using System.Diagnostics;
 using Interfaces;
+using Managers;
 using UnityEngine;
 
 namespace Objects
@@ -11,6 +12,11 @@ namespace Objects
         [SerializeField] private float speedUpAndDown;
         [SerializeField] private float timerLimit;
         private float timer;
+
+        public void Start()
+        {
+            SecretManager.Instance.MaxCoins++;
+        }
         public void Update()
         {
             transform.Rotate(Vector3.up * (Time.deltaTime * speedRotation));
@@ -25,8 +31,9 @@ namespace Objects
 
         public void Interact()
         {
-            UIManager.instance.Coins += 1;
-            UIManager.instance.ReloadText();
+            UIManager.Instance.Coins += 1;
+            UIManager.Instance.ReloadText();
+            SecretManager.Instance.CheckCoins();
             Destroy(gameObject);
         }
     }
