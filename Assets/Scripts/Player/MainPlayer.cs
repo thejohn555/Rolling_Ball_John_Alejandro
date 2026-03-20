@@ -1,4 +1,5 @@
 using Characters;
+using Managers;
 using UnityEngine;
 
 namespace Player
@@ -18,8 +19,7 @@ namespace Player
 
         protected void Start()
         {
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
+            GamesManager.Instance.LoockCursor();
         }
     }
 }

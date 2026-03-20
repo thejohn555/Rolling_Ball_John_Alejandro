@@ -47,7 +47,7 @@ namespace Managers
             hpVisual.offsetMax = new Vector2(f, hpVisual.offsetMax.y);
             if (hp <= 0)
             {
-                GameManager.Instance.Lose();
+                GamesManager.Instance.Lose();
             }
         }
 

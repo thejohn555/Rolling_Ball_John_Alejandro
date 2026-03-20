@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Win : MonoBehaviour
 {
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            GameManager.Instance.Win();
+            GamesManager.Instance.Win();
         }
     }
 }

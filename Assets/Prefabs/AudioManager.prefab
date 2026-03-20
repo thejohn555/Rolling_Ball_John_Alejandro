@@ -307,3 +307,6 @@ MonoBehaviour:
   sfxSource: {fileID: 8360751252751553544}
   soundsSource:
   - {fileID: 8300000, guid: d0eb40ea4c7cb514190aa93f4a98a23d, type: 3}
+  - {fileID: 8300000, guid: e1f51944227e7804f87cd473d86a7ac6, type: 3}
+  - {fileID: 8300000, guid: 3bfde6bd72ee2c7459658d3296049fe0, type: 3}
+  - {fileID: 8300000, guid: 314bd57c147a740479357035ea28a688, type: 3}

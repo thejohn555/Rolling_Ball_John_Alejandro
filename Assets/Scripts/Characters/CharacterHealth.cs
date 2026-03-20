@@ -21,7 +21,7 @@ namespace Characters
         public virtual void MakeDamage(int damage)
         {
             health -= damage;
-            AudioManager.Instance.PlayHitSound(0);
+            AudioManager.Instance.PlaySound(0);
             if (health > 0) return;
             health = 0;
             Destroy(gameObject);

@@ -51,10 +51,10 @@ public class Trap : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (!Active) return;
+        if (Active) return;
         if (other.TryGetComponent(out IDamageable damageable))
         {
-            Active = true;
+            Active = MeshRenderer.enabled;
         }
     }
 }

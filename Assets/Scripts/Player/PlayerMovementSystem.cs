@@ -39,6 +39,7 @@ namespace Player
                 if (isGrounded)
                 {
                     main.Rb.AddForce(Vector3.up*jumpForce,ForceMode.Impulse);
+                    AudioManager.Instance.PlaySound(3);
                 }
             }
         }

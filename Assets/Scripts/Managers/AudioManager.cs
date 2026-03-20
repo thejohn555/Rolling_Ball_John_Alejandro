@@ -20,7 +20,7 @@ public class AudioManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    public void PlayHitSound(int index)
+    public void PlaySound(int index)
     {
         sfxSource.PlayOneShot(soundsSource[index]);
     }
